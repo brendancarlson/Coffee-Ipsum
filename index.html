@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <!-- ANALYTICS -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+
+    <!-- SEO -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Le French generator 🇫🇷</title>
+    <meta name="description" content="Generate random French sentences." />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- MOBILE -->
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="theme-color" content="#1994d2" />
+
+    <!-- STYLING -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- SCRIPTING -->
+    <script async src="https://use.fontawesome.com/7a1c961567.js"></script>
+    <script>
+      function clickDownloadButton(platform, position){
+        console.log("Event: Clicked DownloadButton " + platform + " " + position);
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'DownloadButton',
+            eventAction: 'click',
+            eventLabel: platform + ' - ' + position
+          });
+        }
+    </script>
+
+  </head>
+  <body>
+
+    <header class="">
+      <section class="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h1>Le French generator 🇫🇷</h1>
+              <p>Generate random text in French.</p>
+              <a class="btn btn-default" onclick="addSentences()">Add some sentences</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="text">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <div id="french-text">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- SIGNATURE -->
+            <style>
+                @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+                @media only screen and (max-width: 40em) {
+                  img.rameerez-logo{
+                    height: 15vw;
+                    max-height: 82px;
+                  }
+                }
+
+                @media only screen and (min-width: 40.063em) {
+                  img.rameerez-logo{
+                    height: 7vw;
+                    max-height: 42px;
+                  }
+                }
+
+                a{
+                  color: #a5a5a5;
+                  text-decoration: none;
+                }
+                .signature-wrapper{
+                  /* background-color: rgba(0,0,0,0.2); */
+                  color: #a5a5a5;
+                }
+                .rameerez-signature{
+                  width: 100%;
+                  display: flex;
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 1vw;
+                }
+                .rameerez-signature > .signature-part{
+                  height: auto;
+                  position: relative;
+                }
+                .center-part{
+                  width: 100%;
+                  text-align: center;
+                }
+                img.rameerez-logo{
+                  width: auto;
+                  height: 7vw;
+                }
+                .signature-text{
+                  position: absolute;
+                  bottom: 0;
+                }
+                .copyright{
+                  width: 100%;
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 8px;
+                  text-align: center;
+                  padding-bottom: 1em;
+                }
+              </style>
+              <div class="signature-wrapper">
+                <div class="rameerez-signature">
+                  <div class="center-part">
+                    <a href="https://rameerez.com">
+                      <img class="rameerez-logo" src="https://rameerez.com/signature-for-white-backgrounds.png" alt="A Rameerez creation" />
+                    </a>
+                  </div>
+                </div>
+                <div class="copyright">
+                  <a href="https://rameerez.com">
+                    <span id="currentYear">2018</span> © Javi Ramirez
+                  </a>
+                </div>
+              </div>
+
+
+              <script type="text/javascript">
+                var dt = new Date();
+                document.getElementById("currentYear").innerHTML = dt.getFullYear();
+              </script>
+              <!-- END SIGNATURE -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <!-- <script src="js/typewriter.js"></script> -->
+    <script src="js/french-generator.js"></script>
+
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));</script>
+
+  </body>
+</html>
